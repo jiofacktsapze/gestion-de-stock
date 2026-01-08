@@ -47,7 +47,7 @@ export class Menu implements OnInit {
       id: '22',
       titre: 'Mouvement du stock',
       icon: 'fa-solid fa-arrow-right-arrow-left',
-      url: '',
+      url: 'mvt-stock',
       }
     ]
   },
@@ -61,7 +61,7 @@ export class Menu implements OnInit {
       id: '31',
       titre: 'Clients',
       icon: 'fa-solid fa-list-check',
-      url: '',
+      url: 'clients',
       },
       {
       id: '32',
@@ -81,7 +81,7 @@ export class Menu implements OnInit {
       id: '41',
       titre: 'Fournisseurs',
       icon: 'fa-solid fa-cart-flatbed',
-      url: '',
+      url: 'fournisseurs',
       },
       {
       id: '42',

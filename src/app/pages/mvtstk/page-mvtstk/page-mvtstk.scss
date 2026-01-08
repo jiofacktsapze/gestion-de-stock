@@ -1,0 +1,14 @@
+.mvt-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mvt-item {
+  display: block; /* important pour un composant Angular */
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 6px;
+  margin-right: 4px
+}
+
