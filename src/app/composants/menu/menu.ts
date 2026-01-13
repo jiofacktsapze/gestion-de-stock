@@ -67,7 +67,7 @@ export class Menu implements OnInit {
       id: '32',
       titre: 'Commandes clients',
       icon: 'fa-solid fa-cart-arrow-down',
-      url: '',
+      url: 'commandesclient',
       }
     ]
   },
@@ -87,7 +87,7 @@ export class Menu implements OnInit {
       id: '42',
       titre: 'Commandes fournisseurs',
       icon: 'fa-solid fa-dolly',
-      url: '',
+      url: 'commandesfournisseur',
       }
     ]
   },

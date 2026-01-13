@@ -9,6 +9,8 @@ import { PageMvtstk } from './pages/mvtstk/page-mvtstk/page-mvtstk';
 import { PageClient } from './pages/client/page-client/page-client';
 import { PageFournisseur } from './pages/fournisseur/page-fournisseur/page-fournisseur';
 import { NouveauCltFrs } from './composants/nouveau-clt-frs/nouveau-clt-frs';
+import { PageCmdCltFrs } from './pages/page-cmd-clt-frs/page-cmd-clt-frs';
+import { NouvelleCmdCltFrs } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -42,12 +44,28 @@ export const routes: Routes = [
         component: NouveauCltFrs
       },
       {
+        path: 'commandesclient',
+        component: PageCmdCltFrs
+      },
+      {
+        path: 'nouvelle-commandeclt',
+        component: NouvelleCmdCltFrs
+      },
+      {
         path: 'fournisseurs',
         component: PageFournisseur
       },
       {
         path: 'nouveau-fournisseur',
         component: NouveauCltFrs
+      },
+      {
+        path: 'commandesfournisseur',
+        component: PageCmdCltFrs
+      },
+      {
+        path: 'nouvelle-commandefrs',
+        component: NouvelleCmdCltFrs
       }
     ]
   }

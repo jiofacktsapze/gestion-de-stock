@@ -1,0 +1,72 @@
+<div class="col">
+
+  <!-- Header -->
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h1>Commande clients / fournisseurs</h1>
+    </div>
+    <div class="col-md-4 text-end p-0">
+      <app-bouton-action
+      (clickEvent)="nouvelleCommande()"
+      ></app-bouton-action>
+    </div>
+  </div>
+
+  <!-- ACCORDION -->
+  <div class="m-3">
+    <div class="accordion" id="accordionExample">
+
+      <!-- ARTICLE 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne">
+            Article 1
+          </button>
+        </h2>
+      
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample">
+
+          <div class="accordion-body p-0">
+
+            <!-- ARTICLE FULL WIDTH -->
+            <div class="w-100 border-bottom p-3">
+              <app-detail-cmd-clt-frs></app-detail-cmd-clt-frs>
+            </div>
+
+            <!-- SCROLLABLE MVT -->
+            <div class="mvt-scroll">
+              <app-detail-cmd></app-detail-cmd>
+              <app-detail-cmd></app-detail-cmd>
+              <app-detail-cmd></app-detail-cmd>     
+              <app-detail-cmd></app-detail-cmd>
+              <app-detail-cmd></app-detail-cmd>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-md-6 text-left">
+                  <h5>12 articles commandées</h5>
+                </div>
+                <div class="col-md-6 text-end">
+                  <h5>Total commande: 9000</h5>                </div>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+
+  <!-- Pagination -->
+  <div class="row m-3">
+    <div class="col-md-12 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+
+</div>
+
