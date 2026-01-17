@@ -101,13 +101,13 @@ export class Menu implements OnInit {
       id: '51',
       titre: 'Catégories',
       icon: 'fa-solid fa-id-badge',
-      url: '',
+      url: 'categories',
       },
       {
       id: '52',
       titre: 'Utilisateurs',
       icon: 'fa-solid fa-user',
-      url: '',
+      url: 'utilisateurs',
       }
     ]
   }

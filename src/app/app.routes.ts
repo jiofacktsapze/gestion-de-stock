@@ -11,6 +11,12 @@ import { PageFournisseur } from './pages/fournisseur/page-fournisseur/page-fourn
 import { NouveauCltFrs } from './composants/nouveau-clt-frs/nouveau-clt-frs';
 import { PageCmdCltFrs } from './pages/page-cmd-clt-frs/page-cmd-clt-frs';
 import { NouvelleCmdCltFrs } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs';
+import { PageCategories } from './pages/categories/page-categories/page-categories';
+import { NouvelleCategory } from './pages/categories/nouvelle-category/nouvelle-category';
+import { PageUtilisateur } from './pages/utilisateur/page-utilisateur/page-utilisateur';
+import { NouvelUtilisateur } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur';
+import { PageProfil } from './pages/profil/page-profil/page-profil';
+import { ChangerMotDePasse } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -45,11 +51,17 @@ export const routes: Routes = [
       },
       {
         path: 'commandesclient',
-        component: PageCmdCltFrs
+        component: PageCmdCltFrs,
+        data: {
+          origin: 'client'
+        }
       },
       {
         path: 'nouvelle-commandeclt',
-        component: NouvelleCmdCltFrs
+        component: NouvelleCmdCltFrs,
+        data: {
+          origin: 'client'
+        }
       },
       {
         path: 'fournisseurs',
@@ -61,11 +73,41 @@ export const routes: Routes = [
       },
       {
         path: 'commandesfournisseur',
-        component: PageCmdCltFrs
+        component: PageCmdCltFrs,
+        data: {
+          origin: 'fournisseur'
+        }
       },
       {
         path: 'nouvelle-commandefrs',
-        component: NouvelleCmdCltFrs
+        component: NouvelleCmdCltFrs,
+        data: {
+          origin: 'fournisseur'
+        }
+      },
+      {
+        path: 'categories',
+        component: PageCategories
+      },
+      {
+        path: 'nouvelle-categorie',
+        component: NouvelleCategory
+      },
+      {
+        path: 'utilisateurs',
+        component: PageUtilisateur
+      },
+      {
+        path: 'nouvel-utilisateur',
+        component: NouvelUtilisateur
+      },
+      {
+        path: 'profil',
+        component: PageProfil
+      },
+      {
+        path: 'changer-mot-de-passe',
+        component: ChangerMotDePasse
       }
     ]
   }
