@@ -47,7 +47,10 @@ export const routes: Routes = [
       },
       {
         path: 'nouveau-client',
-        component: NouveauCltFrs
+        component: NouveauCltFrs,
+        data: {
+          origin: 'client'
+        }
       },
       {
         path: 'commandesclient',
@@ -69,7 +72,10 @@ export const routes: Routes = [
       },
       {
         path: 'nouveau-fournisseur',
-        component: NouveauCltFrs
+        component: NouveauCltFrs,
+        data: {
+          origin: 'fournisseur'
+        }
       },
       {
         path: 'commandesfournisseur',

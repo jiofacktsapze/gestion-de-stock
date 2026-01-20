@@ -1,11 +1,11 @@
 <div class="col m-3" >
-  <div class="col-md-12 mb-3">
+  <div class="col-md-12 mb-3 mt-3">
     <img src="assets/product.png" class="rounded-circle" width="200px" height="200px" alt="Product Image">
   </div>
   <hr>
   <div class="col-md-12">
     <div class="col-md-12 mb-3">
-      <h2><i class="fa-solid fa-circle-info blue-color"></i>&nbsp;Information du client / fournisseur</h2>
+      <h2><i class="fa-solid fa-circle-info blue-color"></i>&nbsp;Information du {{origin}}</h2>
     </div>
     <div class="col-md-12">
       <form>
@@ -53,11 +53,11 @@
     </div>
   </div>
   <div class="col-md-12 text-end ">
-    <button type="button" class="btn btn-danger m-3">
+    <button type="button" class="btn btn-danger m-3" (click)="cancelClick()">
       <i class="fa-solid fa-ban"></i>&nbsp;
       Annuler
     </button>
-    <button type="button" class="btn btn-success">
+    <button type="button" class="btn btn-success" (click)="saveClick()">
       <i class="fa-solid fa-floppy-disk"></i>&nbsp;
       Enregistrer
     </button>

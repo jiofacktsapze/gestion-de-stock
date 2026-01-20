@@ -3,5 +3,7 @@ export interface SideMenu{
   titre?: string;
   icon?: string;
   url?: string;
+  active?: boolean;
+  
   sousMenu?: Array<SideMenu>;
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nouvel-utilisateur',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './nouvel-utilisateur.html',
   styleUrl: './nouvel-utilisateur.scss',
 })
-export class NouvelUtilisateur {
+export class NouvelUtilisateur implements OnInit{
+constructor(
+  private router: Router
+){}
 
+ngOnInit(): void {}
+
+cancel(): void{
+  this.router.navigate(['/utilisateurs']);
+}
 }
