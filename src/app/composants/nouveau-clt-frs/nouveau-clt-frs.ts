@@ -1,0 +1,34 @@
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-nouveau-clt-frs',
+  imports: [],
+  templateUrl: './nouveau-clt-frs.html',
+  styleUrl: './nouveau-clt-frs.scss',
+})
+export class NouveauCltFrs implements OnInit {
+  origin = '';
+
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    const data = this.activatedRoute.snapshot.data as { origin: string };
+    this.origin = data.origin;
+  }
+
+  saveClick(): void {
+  }
+
+  cancelClick(): void {
+    if (this.origin === 'client') {
+      this.router.navigate(['/clients']);
+    } else if (this.origin === 'fournisseur') {
+      this.router.navigate(['/fournisseurs']);
+    } 
+  }
+}
+

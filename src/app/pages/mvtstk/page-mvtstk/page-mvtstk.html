@@ -1,0 +1,102 @@
+<div class="col">
+
+  <!-- Header -->
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h1>Mouvements du stock</h1>
+    </div>
+    <div class="col-md-4 text-end p-0">
+      <app-bouton-action
+      [isImporterVisible]="false"
+      [isNouveauVisible]="false">
+      </app-bouton-action>
+    </div>
+  </div>
+
+  <!-- ACCORDION -->
+  <div class="m-3">
+    <div class="accordion" id="accordionExample">
+
+      <!-- ARTICLE 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne">
+            Article 1
+          </button>
+        </h2>
+      
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample">
+
+          <div class="accordion-body p-0">
+
+            <!-- ARTICLE FULL WIDTH -->
+            <div class="w-100 border-bottom p-3">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </div>
+
+            <!-- SCROLLABLE MVT -->
+            <div class="mvt-scroll">
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ARTICLE 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo">
+            Article 2
+          </button>
+        </h2>
+
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample">
+
+          <div class="accordion-body p-0">
+
+            <div class="w-100 border-bottom p-3">
+              <app-detail-mvt-stk-article></app-detail-mvt-stk-article>
+            </div>
+
+            <div class="mvt-scroll">
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+              <app-detail-mvt-stk class="mvt-item"></app-detail-mvt-stk>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="row m-3">
+    <div class="col-md-12 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+
+</div>
